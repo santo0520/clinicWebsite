@@ -140,6 +140,7 @@
 
 				<div class="swiper-container swiper-parent">
 					<div class="swiper-wrapper">
+
 						<div class="swiper-slide">
 							<div class="container">
 								<div class="slider-caption slider-caption-right" style="max-width: 700px;">
@@ -152,6 +153,7 @@
 							{% image page.img_slider1 original as slider1 %}
 							<div class="swiper-slide-bg" style="background-image: url('{{slider1.url}}');"></div>
 						</div>
+
 						<div class="swiper-slide">
 							<div class="container">
 								<div class="slider-caption">
@@ -161,9 +163,24 @@
 									</div>
 								</div>
 							</div>
-							<div class="swiper-slide-bg" style="background-image: url('{% static 'demos/medical/images/slider/2.jpg' %}');"></div>
+							{% image page.img_slider2 original as slider2 %}
+							<div class="swiper-slide-bg" style="background-image: url('{{slider2.url}}');"></div>
 						</div>
-					</div>	
+
+						<div class="swiper-slide">
+							<div class="container">
+								<div class="slider-caption">
+									<div>
+										<h2 data-animate="zoomIn">Heart<span>Beat</span>.</h2>
+										<p class="d-none d-sm-block" data-animate="zoomIn" data-delay="500">Care for your Loved Ones from the Experts in the Medical &amp; Hospitality Industry.</p>
+									</div>
+								</div>
+							</div>
+							{% image page.img_slider3 original as slider3 %}
+							<div class="swiper-slide-bg" style="background-image: url('{{slider3.url}}');"></div>
+						</div>
+
+					</div>		
 
 				</div>
 
