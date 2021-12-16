@@ -61,3 +61,42 @@ class HomePageSliderImage3(Orderable):
     panels = [
         ImageChooserPanel('image'),
     ]
+
+
+
+
+
+
+
+class AboutPage(Page):
+
+    pass
+
+
+
+
+
+class DepartmentsPage(Page):
+
+    pass
+
+
+class AppointmentPage(Page):
+
+    pass
+
+
+class BlogPage(Page):
+
+    pass
+
+
+class ContactPage(Page):
+
+    pass
+
+
+class DoctorsPage(Page):
+
+    pass
+
