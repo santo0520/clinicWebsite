@@ -17,7 +17,8 @@
 				<div class="flexslider">
 
 					<div class="slider-wrap">
-						<div class="slide"><img src="{% static 'demos/medical/images/about-us/page-title/1.jpg' %}" alt="Page Title Image"></div>
+						{% image page.img_slider1 fill-1920x600 as slider1 %}
+						<div class="slide"><img src="{{slider1.url}}" alt="Page Title Image"></div>
 						<div class="slide"><img src="{% static 'demos/medical/images/about-us/page-title/2.jpg' %}" alt="Page Title Image"></div>
 						<div class="slide"><img src="{% static 'demos/medical/images/about-us/page-title/3.jpg' %}" alt="Page Title Image"></div>
 						<div class="slide"><img src="{% static 'demos/medical/images/about-us/page-title/4.jpg' %}" alt="Page Title Image"></div>

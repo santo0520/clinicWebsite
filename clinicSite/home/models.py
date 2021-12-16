@@ -69,10 +69,27 @@ class HomePageSliderImage3(Orderable):
 
 
 class AboutPage(Page):
+    def img_slider1(self):
+        gallery_item = self.sliderImage1.first()
+        if gallery_item:
+            return gallery_item.image
+        else:
+            return None
 
-    pass
+    content_panels = Page.content_panels + [
+
+        InlinePanel('sliderImage1', label = "Slider image No.1"),
+
+    ]
 
 
+class AboutPageSliderImage1(Orderable):
+    page =ParentalKey(AboutPage, on_delete=models.CASCADE, related_name='sliderImage1')
+    image = models.ForeignKey('wagtailimages.Image', on_delete=models.CASCADE, related_name='+')
+
+    panels = [
+        ImageChooserPanel('image'),
+    ]
 
 
 
