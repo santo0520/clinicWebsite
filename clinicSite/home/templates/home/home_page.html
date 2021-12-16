@@ -1,4 +1,6 @@
 {% load static %}
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -147,7 +149,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="swiper-slide-bg" style="background-image: url('{% static 'images/slider2.png' %}');"></div>
+							{% image page.img_slider1 original as slider1 %}
+							<div class="swiper-slide-bg" style="background-image: url('{{slider1.url}}');"></div>
 						</div>
 						<div class="swiper-slide">
 							<div class="container">
