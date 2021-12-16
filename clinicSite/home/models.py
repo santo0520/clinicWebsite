@@ -117,3 +117,8 @@ class DoctorsPage(Page):
 
     pass
 
+class RadioPage(Page):
+    pass
+
+
+
