@@ -103,7 +103,7 @@ class AppointmentPage(Page):
     pass
 
 
-class BlogPage(Page):
+class BlogIndexPage(Page):
 
     pass
 
