@@ -108,11 +108,24 @@ class AppointmentPage(Page):
 
 class BlogIndexPage(Page):
 
-    pass
+     def get_context(self, request):
+        # Update context to include only published posts, ordered by reverse-chron
+        context = super().get_context(request)
+        blogpages = self.get_children().live().order_by('-first_published_at')
+        context['blogpages'] = blogpages
+        return context
 
 
 
 class BlogPage(Page):
+
+    def img_main(self):
+        gallery_item = self.blogMainImage.first()
+        if gallery_item:
+            return gallery_item.image
+        else:
+            return None
+
     date = models.DateField("Post date")
     body = RichTextField(blank=True)
 
@@ -124,7 +137,21 @@ class BlogPage(Page):
     content_panels = Page.content_panels + [
         FieldPanel('date'),
         FieldPanel('body', classname="full"),
+        InlinePanel('blogMainImage', label = "Blog Main image"),
     ]
+
+
+
+
+class BlogPageMainImage(Orderable):
+    page =ParentalKey(BlogPage, on_delete=models.CASCADE, related_name='blogMainImage')
+    image = models.ForeignKey('wagtailimages.Image', on_delete=models.CASCADE, related_name='+')
+
+    panels = [
+        ImageChooserPanel('image'),
+    ]
+
+
 
 class ContactPage(Page):
 
