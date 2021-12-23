@@ -1,10 +1,13 @@
 from django.db import models
 
 from wagtail.core.models import Page, Orderable
-from wagtail.admin.edit_handlers import InlinePanel
+from wagtail.core.fields import RichTextField
+from wagtail.admin.edit_handlers import InlinePanel , FieldPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 
 from modelcluster.fields import ParentalKey
+
+from wagtail.search import index
 
 
 
@@ -107,6 +110,21 @@ class BlogIndexPage(Page):
 
     pass
 
+
+
+class BlogPage(Page):
+    date = models.DateField("Post date")
+    body = RichTextField(blank=True)
+
+    search_fields = Page.search_fields + [
+
+        index.SearchField('body'),
+    ]
+
+    content_panels = Page.content_panels + [
+        FieldPanel('date'),
+        FieldPanel('body', classname="full"),
+    ]
 
 class ContactPage(Page):
 
