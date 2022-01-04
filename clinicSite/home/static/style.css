@@ -3619,14 +3619,14 @@ body:not(.top-search-open) .top-search-parent #primary-menu-trigger {
 }
 
 
-/*  menu link styles  */
+/*  clinic menu link styles  */
 .menu-link {
 	display: block;
 	line-height: 22px;
 	padding: 14px 5px;
 	color: #444;
 	font-weight: 700;
-	font-size: 1.0rem;
+	font-size: 1.2rem;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	font-family: 'Poppins', sans-serif;
@@ -4180,7 +4180,7 @@ body:not(.top-search-open) .top-search-parent #primary-menu-trigger {
 
 
 	/* Primary Menu - Style 3
-	/* main menu styles
+	/* clinic main menu styles
 	-----------------------------------------------------------------*/
 
 
@@ -13633,11 +13633,11 @@ h3.titular-title { font-size: 2rem; }
 	text-transform: none;
 }
 
-.heading-block h1 { font-size: 32px; }
+.heading-block h1 { font-size: 2.5rem; }
 
 .heading-block h2 { font-size: 30px; }
 
-.heading-block h3 { font-size: 1.75rem; }
+.heading-block h3 { font-size: 1.2rem; }
 
 .heading-block h4 {
 	font-size: 1.25rem;
@@ -13675,12 +13675,14 @@ h3.titular-title { font-size: 2rem; }
 .heading-block h3 + span,
 .heading-block h4 + span { font-size: 1.25rem; }
 
+.heading-block h5 + span { font-size: 3rem; 
+							}
 .heading-block::after {
 	content: '';
 	display: block;
 	margin-top: 30px;
 	width: 40px;
-	border-top: 2px solid #444;
+	border-top: 2px solid #1ABC9C;
 }
 
 .center .heading-block::after,
