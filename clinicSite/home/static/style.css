@@ -3618,13 +3618,15 @@ body:not(.top-search-open) .top-search-parent #primary-menu-trigger {
 	border-top: 1px solid #EEE;
 }
 
+
+/*  menu link styles  */
 .menu-link {
 	display: block;
 	line-height: 22px;
 	padding: 14px 5px;
 	color: #444;
 	font-weight: 700;
-	font-size: 0.8125rem;
+	font-size: 1.0rem;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	font-family: 'Poppins', sans-serif;
@@ -4178,7 +4180,9 @@ body:not(.top-search-open) .top-search-parent #primary-menu-trigger {
 
 
 	/* Primary Menu - Style 3
+	/* main menu styles
 	-----------------------------------------------------------------*/
+
 
 	.style-3 .menu-container > .menu-item > .menu-link {
 		margin: 28px 0;
