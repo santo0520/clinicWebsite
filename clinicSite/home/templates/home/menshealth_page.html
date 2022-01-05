@@ -1,15 +1,342 @@
 {% extends "home/base.html" %}
 
 
-
 {% load static %}
 {% load wagtailcore_tags %}
 {% load wagtailimages_tags %}
 
 
 	{% block content %}
-	
-<h1>welcome to 男性健康醫學</h1>
+
+
+
+		<!-- Yoga Demo Specific Stylesheet -->
+	<link rel="stylesheet" href="{% static 'css/colors.php?color=7E9680' %}" type="text/css" /> <!-- Yoga Theme Color -->
+	<link rel="stylesheet" href="{% static 'demos/yoga/css/fonts.css' %}" type="text/css" /> <!-- Yoga Theme Font -->
+	<link rel="stylesheet" href="{% static 'demos/yoga/yoga.css' %}" type="text/css" /> <!-- Yoga Theme Custom CSS -->
+	<!-- / -->
+
+
+
+
+
+
+		<!-- Slider
+		============================================= -->
+		<section id="slider" class="slider-element swiper_wrapper min-vh-100" data-effect="fade">
+			<div class="slider-inner">
+
+				<div class="swiper-container swiper-parent">
+					<div class="swiper-wrapper">
+						<!-- Slide 1 -->
+						<div class="swiper-slide hero-diagonal dark bg-color" style="background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0, 0.1)), url('{% static 'demos/yoga/images/slider/hero-1.jpg' %}') no-repeat center right / auto 100%;">
+							<div class="container" style="z-index: 2;">
+								<div class="row h-100 align-items-center py-5">
+									<div class="col-md-6">
+										<div class="heading-block border-bottom-0 bottommargin-sm">
+											<h5 class="text-uppercase ls4 fw-light mb-2 text-white-50" data-animate="fadeInUp" data-delay="100">Yoga &amp; Meditation</h5>
+											<h2 class="fw-bold nott ls0" data-animate="fadeInUp" data-delay="200" style="font-size: 46px;">男性健康醫學</h2>
+										</div>
+										<p class="mb-5 fw-normal lead" data-animate="fadeInUp" data-delay="400" style="line-height: 1.6;">Monotonectally pursue intuitive catalysts for change for extensible materials. Intrinsicly fabricate principle-centered web-readiness with virtual.</p>
+										<a href="#" data-scrollto="#section-about" data-offset="70"  data-animate="fadeInUp" data-delay="600" class="btn rounded bg-white color text-uppercase fw-semibold ls1 py-3 px-4">Get Started <i class="icon-line-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Slide 2 -->
+						<div class="swiper-slide hero-diagonal dark bg-color" style="background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0, 0.1)), url('{% static 'demos/yoga/images/slider/hero-2.jpg' %}') no-repeat bottom right / auto 100%;">
+							<div class="container" style="z-index: 2;">
+								<div class="row h-100 align-items-center py-5">
+									<div class="col-md-6">
+										<div class="heading-block border-bottom-0 bottommargin-sm">
+											<h5 class="text-uppercase ls4 fw-light mb-2 text-white-50" data-animate="fadeInUp" data-delay="100">Yoga &amp; Meditation</h5>
+											<h2 class="fw-bold nott ls0" data-animate="fadeInUp" data-delay="200" style="font-size: 42px;">Yoga is the perfect opportunity to be curious about who you are.</h2>
+										</div>
+										<p class="mb-5 fw-normal lead" data-animate="fadeInUp" data-delay="400" style="line-height: 1.6;">Monotonectally pursue intuitive catalysts for change for extensible materials. Intrinsicly fabricate principle-centered web-readiness with virtual.</p>
+										<a href="#" data-scrollto="#section-about" data-offset="70"  data-animate="fadeInUp" data-delay="600" class="btn rounded bg-white color text-uppercase fw-semibold ls1 py-3 px-4">Get Started <i class="icon-line-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
+					<div class="slider-arrow-right"><i class="icon-angle-right"></i></div>
+					<div class="slide-number"><div class="slide-number-current"></div><span>/</span><div class="slide-number-total"></div></div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- Content
+		============================================= -->
+		<section id="content" class="bg-white">
+			<div class="content-wrap pt-0" style="overflow: visible">
+
+				<div class="position-relative">
+					<div class="container">
+						<div class="row py-0 py-lg-5">
+							<div class="col-lg-5 py-5">
+								<div class="heading-block border-bottom-0 bottommargin-sm">
+									<div class="fancy-title title-border mb-3"><h5 class="fw-normal color font-body">About Us</h5></div>
+									<h3 class="fw-bold nott" style="font-size: 42px; letter-spacing: -1px;">What is <span>Canvas</span> Yoga?</h3>
+								</div>
+								<p class="mb-5">Monotonectally pursue intuitive catalysts for change for extensible materials intrinsicly fabricate.</p>
+
+								<div class="feature-box fbox-plain bottommargin-sm">
+									<div class="fbox-icon">
+										<i class="icon-line-circle-check text-primary"></i>
+									</div>
+									<div class="fbox-content">
+										<h3 class="fw-normal nott">Classes Every Week.</h3>
+										<p>Canvas provides support for Native HTML5 Videos that can be added to a Full Width Background.</p>
+									</div>
+								</div>
+
+								<div class="feature-box fbox-plain bottommargin-sm">
+									<div class="fbox-icon">
+										<i class="icon-line-circle-check text-warning"></i>
+									</div>
+									<div class="fbox-content">
+										<h3 class="fw-normal nott">10+ Years Experienced.</h3>
+										<p>Canvas provides support for Native HTML5 Videos that can be added to a Full Width Background.</p>
+									</div>
+								</div>
+
+								<div class="feature-box fbox-plain">
+									<div class="fbox-icon">
+										<i class="icon-line-circle-check text-info"></i>
+									</div>
+									<div class="fbox-content">
+										<h3 class="fw-normal nott">2100+ Members Active.</h3>
+										<p>Canvas provides support for Native HTML5 Videos that can be added to a Full Width Background.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section-img" style="background: radial-gradient(ellipse at center, rgba(255,221,148,.7),rgba(255,221,148,1)), url('{% static 'demos/yoga/images/yoga-about.jpg' %}') no-repeat center center / cover">
+						<img class="section-img-sm" src="{% static 'demos/yoga/images/yoga-about-sm.jpg' %}" alt="Section Img">
+					</div>
+				</div>
+
+				<div class="section section-yogas mb-0" style="background-color: rgba(126, 150, 128,0.2); padding: 100px 0">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-lg-4">
+								<div class="card" style="border-top-color: #9DC3E2;">
+									<div class="card-body">
+										<img src="{% static 'demos/yoga/images/yoga-icons/color/svg/asana_lotus_col.svg' %}" alt="Yoga Icon" class="mb-3" width="60">
+										<h3>Yoga For Beginners.</h3>
+										<p class="text-black-50">Synergistically fashion high-payoff infrastructures for client-centric interfaces. Distinctively e-enable market positioning.</p>
+									</div>
+								</div>
+								<div class="card topmargin" style="border-top-color: #FFB5CC;">
+									<div class="card-body">
+										<img src="{% static 'demos/yoga/images/yoga-icons/color/svg/asana_cobra.svg' %}" alt="Yoga Icon" class="mb-3" width="60">
+										<h3>30+ Yoga Poses.</h3>
+										<p class="text-black-50">Synergistically fashion high-payoff infrastructures for client-centric interfaces. Distinctively e-enable market positioning.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-6 col-lg-4" style="margin-top: 30px">
+								<div class="card" style="border-top-color: #F4ABEF;">
+									<div class="card-body">
+										<img src="{% static 'demos/yoga/images/yoga-icons/color/svg/man_well.svg' %}" alt="Yoga Icon" class="mb-3" width="60">
+										<h3>Well Trained Teachers</h3>
+										<p class="text-black-50">Energistically incentivize intuitive channels for team building mindshare. Compellingly benchmark functionalized.</p>
+									</div>
+								</div>
+								<div class="card topmargin" style="border-top-color: #F2A490;">
+									<div class="card-body">
+										<img src="{% static 'demos/yoga/images/yoga-icons/color/svg/kundalini_col.svg' %}" alt="Yoga Icon" class="mb-3" width="60">
+										<h3>Filtered Juices Per Day.</h3>
+										<p class="text-black-50">Energistically incentivize intuitive channels for team building mindshare. Compellingly benchmark functionalized.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-6 col-lg-4" style="margin-top: 60px">
+								<div class="card" style="border-top-color: #9DD2D8;">
+									<div class="card-body">
+										<img src="{% static 'demos/yoga/images/yoga-icons/color/svg/lotus_col.svg' %}" alt="Yoga Icon" class="mb-3" width="60">
+										<h3>Classes in Natures</h3>
+										<p class="text-black-50">Synergistically fashion high-payoff infrastructures for client-centric interfaces. Distinctively e-enable market positioning.</p>
+									</div>
+								</div>
+								<div class="card topmargin" style="border-top-color: #D0E6A5;">
+									<div class="card-body">
+										<img src="{% static 'demos/yoga/images/yoga-icons/color/svg/om_col.svg' %}" alt="Yoga Icon" class="mb-3" width="60">
+										<h3>1 Free Trial Class.</h3>
+										<p class="text-black-50">Synergistically fashion high-payoff infrastructures for client-centric interfaces. Distinctively e-enable market positioning.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+		<div class="section bg-transparent my-0 pb-1">
+					<div class="container">
+						<div class="heading-block" style="max-width: 500px">
+							<h3 class="fw-bold nott mb-4" style="font-size: 42px; letter-spacing: -1px;">Certified Yoga <span>Teachers</span>.</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nesciunt tenetur iste odit animi mollitia amet autem alias ea dicta!</p>
+						</div>
+					</div>
+					<div id="oc-teachers" class="owl-carousel owl-carousel-full image-carousel carousel-widget customjs">
+						<div class="oc-item">
+							<div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('{% static 'demos/yoga/images/teacher/1.jpg' %}') no-repeat center center / cover;">
+								<div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
+									<div class="col-md-8">
+										<div class="testimonial bg-transparent shadow-none border-0 p-0">
+											<h2 class="mb-1">Ruby Von Rails</h2>
+											<div class="testi-meta ls1 mb-4 text-light fw-normal"> Professional Trainer</div>
+											<div class="testi-content">
+												<p>Assertively leverage existing integrated communities after turnkey quality vectors. Assertively coordinate sustainable quality.</p>
+											</div>
+										</div>
+										<div class="social-icons topmargin-sm">
+											<a href="https://www.facebook.com/semicolonweb/" target="_blank" class="social-icon si-facebook si-small si-light">
+												<i class="icon-facebook"></i><i class="icon-facebook"></i>
+											</a>
+											<a href="https://www.instagram.com/semicolonweb/" target="_blank" class="social-icon si-instagram si-small si-light">
+												<i class="icon-instagram"></i><i class="icon-instagram"></i>
+											</a>
+											<a href="#" target="_blank" class="social-icon si-youtube si-small si-light">
+												<i class="icon-youtube"></i><i class="icon-youtube"></i>
+											</a>
+											<a href="#" target="_blank" class="social-icon si-dribbble si-small si-light">
+												<i class="icon-dribbble"></i><i class="icon-dribbble"></i>
+											</a>
+										</div>
+									</div>
+									<div class="col-md-4 d-flex justify-content-md-center mt-3 mt-md-0">
+										<a href="https://www.youtube.com/watch?v=P3Huse9K6Xs" data-lightbox="iframe" class="play-icon"><i class="icon-play1"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="oc-item">
+							<div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('{% static 'demos/yoga/images/teacher/2.jpg' %}') no-repeat center center / cover;">
+								<div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
+									<div class="col-md-8">
+										<div class="testimonial bg-transparent shadow-none border-0 p-0">
+											<h2 class="mb-1">Theodore Handle</h2>
+											<div class="testi-meta ls1 mb-4 text-light fw-normal"> International Trainer</div>
+											<div class="testi-content">
+												<p>Assertively leverage existing integrated communities after turnkey quality vectors. Assertively coordinate sustainable quality.</p>
+											</div>
+										</div>
+										<div class="social-icons topmargin-sm">
+											<a href="https://www.facebook.com/semicolonweb/" target="_blank" class="social-icon si-facebook si-small si-light">
+												<i class="icon-facebook"></i><i class="icon-facebook"></i>
+											</a>
+											<a href="https://www.instagram.com/semicolonweb/" target="_blank" class="social-icon si-instagram si-small si-light">
+												<i class="icon-instagram"></i><i class="icon-instagram"></i>
+											</a>
+											<a href="#" target="_blank" class="social-icon si-youtube si-small si-light">
+												<i class="icon-youtube"></i><i class="icon-youtube"></i>
+											</a>
+										</div>
+									</div>
+									<div class="col-md-4 d-flex justify-content-md-center mt-3 mt-md-0">
+										<a href="https://www.youtube.com/watch?v=P3Huse9K6Xs" data-lightbox="iframe" class="play-icon"><i class="icon-play1"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="oc-item">
+							<div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('{% static 'demos/yoga/images/teacher/3.jpg' %}') no-repeat center center / cover;">
+								<div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
+									<div class="col-md-8">
+										<div class="testimonial bg-transparent shadow-none border-0 p-0">
+											<h2 class="mb-1">Norman Gordon</h2>
+											<div class="testi-meta ls1 mb-4 text-light fw-normal"> Professional Trainer</div>
+											<div class="testi-content">
+												<p>Assertively leverage existing integrated communities after turnkey quality vectors. Assertively coordinate sustainable quality.</p>
+											</div>
+										</div>
+										<div class="social-icons topmargin-sm">
+											<a href="https://www.facebook.com/semicolonweb/" target="_blank" class="social-icon si-facebook si-small si-light">
+												<i class="icon-facebook"></i><i class="icon-facebook"></i>
+											</a>
+											<a href="https://www.instagram.com/semicolonweb/" target="_blank" class="social-icon si-instagram si-small si-light">
+												<i class="icon-instagram"></i><i class="icon-instagram"></i>
+											</a>
+											<a href="#" target="_blank" class="social-icon si-dribbble si-small si-light">
+												<i class="icon-dribbble"></i><i class="icon-dribbble"></i>
+											</a>
+										</div>
+									</div>
+									<div class="col-md-4 d-flex justify-content-md-center mt-3 mt-md-0">
+										<a href="https://www.youtube.com/watch?v=P3Huse9K6Xs" data-lightbox="iframe" class="play-icon"><i class="icon-play1"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="oc-item">
+							<div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('{% static 'demos/yoga/images/teacher/4.jpg' %}') no-repeat center center / cover;">
+								<div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
+									<div class="col-md-8">
+										<div class="testimonial bg-transparent shadow-none border-0 p-0">
+											<h2 class="mb-1">Jason Response</h2>
+											<div class="testi-meta ls1 mb-4 text-light fw-normal"> International Trainer</div>
+											<div class="testi-content">
+												<p>Assertively leverage existing integrated communities after turnkey quality vectors. Assertively coordinate sustainable quality.</p>
+											</div>
+										</div>
+										<div class="social-icons topmargin-sm">
+											<a href="https://www.facebook.com/semicolonweb/" target="_blank" class="social-icon si-facebook si-small si-light">
+												<i class="icon-facebook"></i><i class="icon-facebook"></i>
+											</a>
+											<a href="https://www.instagram.com/semicolonweb/" target="_blank" class="social-icon si-instagram si-small si-light">
+												<i class="icon-instagram"></i><i class="icon-instagram"></i>
+											</a>
+											<a href="#" target="_blank" class="social-icon si-dropbox si-small si-light">
+												<i class="icon-dropbox"></i><i class="icon-dropbox"></i>
+											</a>
+										</div>
+									</div>
+									<div class="col-md-4 d-flex justify-content-md-center mt-3 mt-md-0">
+										<a href="https://www.youtube.com/watch?v=P3Huse9K6Xs" data-lightbox="iframe" class="play-icon"><i class="icon-play1"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="oc-item">
+							<div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('{% static 'demos/yoga/images/teacher/5.jpg' %}') no-repeat center center / cover;">
+								<div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
+									<div class="col-md-8">
+										<div class="testimonial bg-transparent shadow-none border-0 p-0">
+											<h2 class="mb-1">Abraham Pigeon</h2>
+											<div class="testi-meta ls1 mb-4 text-light fw-normal"> Professional Trainer</div>
+											<div class="testi-content">
+												<p>Assertively leverage existing integrated communities after turnkey quality vectors. Assertively coordinate sustainable quality.</p>
+											</div>
+										</div>
+										<div class="social-icons topmargin-sm">
+											<a href="https://www.facebook.com/semicolonweb/" target="_blank" class="social-icon si-facebook si-small si-light">
+												<i class="icon-facebook"></i><i class="icon-facebook"></i>
+											</a>
+											<a href="https://www.instagram.com/semicolonweb/" target="_blank" class="social-icon si-instagram si-small si-light">
+												<i class="icon-instagram"></i><i class="icon-instagram"></i>
+											</a>
+											<a href="#" target="_blank" class="social-icon si-email3 si-small si-light">
+												<i class="icon-email3"></i><i class="icon-email3"></i>
+											</a>
+										</div>
+									</div>
+									<div class="col-md-4 d-flex justify-content-md-center mt-3 mt-md-0">
+										<a href="https://www.youtube.com/watch?v=P3Huse9K6Xs" data-lightbox="iframe" class="play-icon"><i class="icon-play1"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
 
 		
 
@@ -17,5 +344,99 @@
 
 
 
+				<div class="section section-price bg-transparent">
+					<div class="container">
+						<div class="d-flex justify-content-between align-items-center bottommargin-lg">
+							<div class="heading-block border-bottom-0 mb-0" style="max-width: 700px">
+								<div class="fancy-title title-border mb-3"><h5 class="fw-normal color font-body text-uppercase ls1">Best Price for Everyone</h5></div>
+								<h2 class="fw-bold mb-2 nott" style="font-size: 42px; letter-spacing: -1px">Your <span>Yoga</span> Plan.</h2>
+								<p class="lead mb-0">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
+							</div>
+							<img src="{% static 'demos/yoga/images/yoga-img.svg' %}" alt="Yoga Image" class="d-none d-sm-flex" width="300">
+						</div>
+
+						
+
+						<div class="clear bottommargin"></div>
+
+						<div class="center text-title"><h3><img src="{% static 'demos/yoga/images/yoga-icons/outlined/svg/sahasara.svg' %}" alt="" width="20" height="20">Additional Features For Annual Subscriber</h3></div>
+						<div class="price-features">
+							<div class="row">
+								<div class="col-md-4">
+									<ul class="iconlist mb-0">
+										<li><i class="icon-line-circle-check color"></i> 24x7 Available</li>
+										<li><i class="icon-line-circle-check color"></i> Free Lunch Per Day</li>
+										<li><i class="icon-line-circle-check color"></i> All Classes in One Price</li>
+										<li><i class="icon-line-circle-check color"></i> Special Event Access</li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<ul class="iconlist mb-0">
+										<li><i class="icon-line-circle-check color"></i> Free Towel Provide</li>
+										<li><i class="icon-line-circle-check color"></i> Free Lockers</li>
+										<li><i class="icon-line-circle-check color"></i> Free Lockers</li>
+										<li><i class="icon-line-circle-check color"></i> Free Yoga Mat*</li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<ul class="iconlist mb-0">
+										<li><i class="icon-line-circle-check color"></i> 1 Month Free</li>
+										<li><i class="icon-line-circle-check color"></i> Any Studio Accessable</li>
+										<li><i class="icon-line-circle-check color"></i> Cancel Anytime</li>
+										<li><i class="icon-line-circle-check color"></i> No Hidden Charges</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="section bg-transparent border-top mb-0">
+					<div class="container">
+						<div class="d-flex justify-content-between align-items-center">
+							<div class="heading-block border-bottom-0 mb-0" style="max-width: 700px">
+								<div class="fancy-title title-border mb-3"><h5 class="fw-normal color font-body text-uppercase ls1">Beautiful Captured</h5></div>
+								<h2 class="fw-bold mb-2 nott" style="font-size: 42px; letter-spacing: -1px">Our <span>Yoga</span> Gallery.</h2>
+								<p class="lead mb-0">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
+							</div>
+							<img src="{% static 'demos/yoga/images/yoga-2.svg' %}" alt="Yoga Image" class="d-none d-sm-flex" width="300">
+						</div>
+					</div>
+				</div>
+	
+
+				<div class="section mb-0 bg-transparent">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-md-6 mb-5 mb-md-0">
+								<div class="yoga-video position-relative">
+									<img src="{% static 'demos/yoga/images/yoga-video.svg' %}" alt="Yoga Image">
+									<a href="https://www.youtube.com/watch?v=P3Huse9K6Xs" data-lightbox="iframe" class="play-icon"><i class="icon-play1"></i></a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="heading-block border-bottom-0 bottommargin-sm">
+									<div class="fancy-title title-border mb-3"><h5 class="fw-normal color font-body text-uppercase ls1">Yoga Poses</h5></div>
+									<h2 class="fw-bold nott" style="font-size: 42px; letter-spacing: -1px;">Check out some of our Yoga Poses Videos.</h2>
+								</div>
+								<p class="mb-5 lead mb-0" style="line-height: 1.7;">Monotonectally pursue intuitive catalysts for change for extensible materials. Intrinsicly fabricate principle-centered web-readiness with virtual.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</section><!-- #content end -->
+
+
+
+		
+
+
 
 		{% endblock %}
+
+
