@@ -116,7 +116,18 @@
 							<ul class="menu-container">
 								<li class="menu-item {% if request.path == '/home/' %}current{% endif %}"><a class="menu-link" href="/home/"><div>首頁</div></a></li>
 								<li class="menu-item {% if request.path == '/about/' %}current{% endif %}"><a class="menu-link" href="/about/"><div>院所介紹</div></a></li>
-								<li class="menu-item {% if request.path == '/departments/' %}current{% endif %}"><a class="menu-link" href="/departments/"><div>熱門療程</div></a></li>
+								<li class="menu-item {% if 'departments' in request.path  %}current{% endif %}"><a class="menu-link" href="/departments/"><div>熱門療程</div></a>
+										<ul class="sub-menu-container">
+										<li class="menu-item"><a class="menu-link" href="/departments/eecp/"><div>EECP先進療程</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="/departments/mens-health/"><div>男性健康醫學</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="/departments/iv-supplements/"><div>日本點滴療法</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="/departments/probiotics/"><div>個人化益生菌</div></a></li>
+										</ul>
+
+
+
+								</li>
+
 								<li class="menu-item {% if request.path == '/appointment/' %}current{% endif %}"><a class="menu-link" href="/appointment/"><div>線上掛號</div></a></li>
 								<li class="menu-item {% if request.path == '/doctors/' %}current{% endif %}"><a class="menu-link" href="/doctors/"><div>醫療團隊</div></a></li>
 								<li class="menu-item  {% if request.path == '/blog/' %}current{% endif %}"><a class="menu-link" href="/blog/"><div>醫學新知</div></a></li>
