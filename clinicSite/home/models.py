@@ -1,9 +1,11 @@
 from django.db import models
 
 from wagtail.core.models import Page, Orderable
-from wagtail.core.fields import RichTextField
-from wagtail.admin.edit_handlers import InlinePanel , FieldPanel
+from wagtail.core.fields import RichTextField , StreamField
+from wagtail.core import  blocks
+from wagtail.admin.edit_handlers import InlinePanel , FieldPanel , StreamFieldPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.images.blocks import ImageChooserBlock
 
 from modelcluster.fields import ParentalKey
 
@@ -126,8 +128,16 @@ class BlogPage(Page):
         else:
             return None
 
+
+
+
+
     date = models.DateField("Post date")
-    body = RichTextField(blank=True)
+    body = StreamField([
+        ('heading', blocks.CharBlock(form_classname="full title")),
+        ('paragraph', blocks.RichTextBlock()),
+        ('image', ImageChooserBlock()),
+    ])
 
     search_fields = Page.search_fields + [
 
@@ -136,7 +146,7 @@ class BlogPage(Page):
 
     content_panels = Page.content_panels + [
         FieldPanel('date'),
-        FieldPanel('body', classname="full"),
+        StreamFieldPanel('body'),
         InlinePanel('blogMainImage', label = "Blog Main image"),
     ]
 

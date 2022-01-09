@@ -94,9 +94,21 @@
 									<div class="col-lg-1"></div>
 
 									<div class="text-content col-lg-6">
-										  {{ page.body|richtext }}
+										 
 
-									
+										 <article>
+										    {% for block in page.body %}
+										        {% if block.block_type == 'heading' %}
+										            <h3 style="color:purple;">{{ block.value }}</h3>
+										        {% else %}
+										            <section class="block-{{ block.block_type }}">
+										                {% include_block block %}
+										            </section>
+										        {% endif %}
+										    {% endfor %}
+										</article>
+
+																			
 									</div>
 									<!-- Post Single - Content End -->
 
