@@ -8,6 +8,18 @@
 
 
 {% block content %}
+
+<!-- facebook sharing javascript sdk -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0" nonce="AgYKeqRn"></script>
+
+<script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+
+
+<!-- end facebook sharing  -->
+
+
+
 		<!-- Blog Demo Specific Stylesheet -->
 	<link rel="stylesheet" href="{% static 'demos/blog/css/fonts.css' %}" type="text/css" />
 	<link rel="stylesheet" href="{% static 'demos/blog/blog.css' %}" type="text/css" />	
@@ -65,24 +77,16 @@
 										============================================= -->
 										<div>
 											<h5 class="mb-2">Share this Post:</h5>
-											<div>
-												<a href="#" class="social-icon si-small si-rounded si-colored si-facebook">
-													<i class="icon-facebook"></i>
-													<i class="icon-facebook"></i>
-												</a>
-												<a href="#" class="social-icon si-small si-rounded si-colored ms-1 si-twitter">
-													<i class="icon-twitter"></i>
-													<i class="icon-twitter"></i>
-												</a>
-												<a href="#" class="social-icon si-small si-rounded si-colored ms-1 si-pinterest">
-													<i class="icon-pinterest"></i>
-													<i class="icon-pinterest"></i>
-												</a>
-												<a href="#" class="social-icon si-small si-rounded si-colored ms-1 si-rss">
-													<i class="icon-rss"></i>
-													<i class="icon-rss"></i>
-												</a>
-											</div>
+
+												
+											<div class="col-md-6 fb-share-button" data-href="http://sanderslin.pythonanywhere.com/blog/pulmonary-fibrosis/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsanderslin.pythonanywhere.com%2Fblog%2Fpulmonary-fibrosis%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+
+											<div class="col-md-6 line-it-button" data-lang="en" data-type="share-a" data-env="REAL" data-url="http://sanderslin.pythonanywhere.com/blog/pulmonary-fibrosis/" data-color="default" data-size="small" data-count="false" data-ver="3" style="display: none;"></div>
+
+											
+										
+										
+											
 										</div><!-- Post Single - Share End -->
 									</div>
 
