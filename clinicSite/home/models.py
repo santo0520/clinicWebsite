@@ -134,7 +134,7 @@ class BlogPage(Page):
 
     date = models.DateField("Post date")
     body = StreamField([
-        ('heading', blocks.CharBlock(form_classname="full title")),
+        ('heading', blocks.CharBlock(form_classname="full title")    ),
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
     ])

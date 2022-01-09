@@ -60,7 +60,7 @@
 							<!-- Entry Image
 							============================================= -->
 							<div class="entry-image mt-5">
-							<img class="rounded" src="{% static 'images/hero.jpg' %}" alt="Blog Single">
+							<img class="rounded" src="{% static 'images/upper crossed syndrome.jpg' %}" alt="Blog Single">
 							</div><!-- .entry-image end -->
 
 							<!-- Entry Content
@@ -99,11 +99,16 @@
 										 <article>
 										    {% for block in page.body %}
 										        {% if block.block_type == 'heading' %}
-										            <h3 style="color:purple;">{{ block.value }}</h3>
+										          
+										            <div class="title-block">
+														<h3 style="color:purple;">{{ block.value }}</h3>
+													</div>
 										        {% else %}
+
 										            <section class="block-{{ block.block_type }}">
 										                {% include_block block %}
 										            </section>
+										            <br>
 										        {% endif %}
 										    {% endfor %}
 										</article>
