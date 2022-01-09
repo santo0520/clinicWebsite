@@ -94,6 +94,7 @@
 									<div class="col-lg-1"></div>
 
 									<div class="text-content col-lg-6">
+
 										 
 
 										 <article>
@@ -103,9 +104,21 @@
 										            <div class="title-block">
 														<h3 style="color:purple;">{{ block.value }}</h3>
 													</div>
-										        {% else %}
+										        {% elif block.block_type == 'image' %}
 
 										            <section class="block-{{ block.block_type }}">
+										                {% image block.value original %}
+										            </section>
+										       
+
+										            <br>
+												   
+													
+												
+												
+
+										        {% else %}
+										        	<section class="block-{{ block.block_type }}">
 										                {% include_block block %}
 										            </section>
 										            <br>
