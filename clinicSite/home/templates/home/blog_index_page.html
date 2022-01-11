@@ -27,111 +27,53 @@
 						<!-- Left Side of Based On Your Reading History
 						============================================= -->
 						<div class="col-lg-8">
-							<h3 class="font-secondary fw-medium">熱門文章</h3>
+							<h3 class="font-secondary fw-medium">最新文章</h3>
 
 							<div class="row col-mb-50">
-								<article class="col-12">
-									<div class="row">
-										<div class="col-md-6 mb-0">
-											<a href="#" class="entry-image">
-												<img src="{% static 'images/upper crossed syndrome.jpg' %}" alt="Image">
-											</a>
-										</div>
-										<div class="col-md-6">
-											<div class="entry-title mt-lg-0 mt-3">
-												<div class="entry-categories"><a  href="/blog/shoulder/" >林進興醫師</a></div>
-												<h3><a  href="/blog/shoulder/"  class="color-underline stretched-link">圓肩駝背的低頭族–上交叉症候群</a></h3>
-											</div>
-											<div class="entry-meta">
-												<ul>
-													<li><a href="#">Mar 11, 2016</a></li>
-												</ul>
-											</div>
-											<div class="entry-content">
-												<p>The technology giants said they would embed a feature in iPhones and Android devices to enable users to track infected people they’d come close to.</p>
-											</div>
-										</div>
-									</div>
-								</article>
 
-								<article class="col-12">
-									<div class="row">
-										<div class="col-md-6 mb-0">
-											<a href="#" class="entry-image">
-												<img src="{% static 'images/influenza-vaccine (1).jpg' %}" alt="Image">
-											</a>
-										</div>
-										<div class="col-md-6">
-											<div class="entry-title mt-lg-0 mt-3">
-												<div class="entry-categories"><a  href="/blog/influenza/">林宏慶醫師</a></div>
-												<h3><a  href="/blog/influenza/"  class="color-underline stretched-link">接種流感疫苗，有助降低新冠肺炎死亡率，感染科醫師圖解說明</a></h3>
-											</div>
-											<div class="entry-meta">
-												<ul>
-													<li><a href="#">Mar 11, 2016</a></li>
-												</ul>
-											</div>
-											<div class="entry-content">
-												<p>Welcome to Five Weeknight Dishes. This newsletter is dedicated to recipes that are easy, quick and satisfying, words that all have a different meaning today than they did when we first started. I spent a few hours this week cleaning out my freezer and — compared with the other things on my to-do list.</p>
-											</div>
-										</div>
-									</div>
-								</article>
+							
 
-								<article class="col-12">
+								{% for post in blogpages|slice:"0:5"%}
+									{% with post=post.specific %}
+									<article class="col-12">
 									<div class="row">
 										<div class="col-md-6 mb-0">
-											<a href="#" class="entry-image">
-												<img src="{% static 'demos/blog/images/lists/3.jpg' %}" alt="Image">
+											<a href="{% pageurl post %}" class="entry-image">
+												{% image post.img_main original as main %}
+												<img src="{{main.url}}" alt="Image">
 											</a>
 										</div>
 										<div class="col-md-6">
 											<div class="entry-title mt-lg-0 mt-3">
-												<div class="entry-categories"><a  href="/blog/shoulder/">Tech</a></div>
-												<h3><a href="/blog/shoulder/"  class="color-underline stretched-link">Optical Effects in User Interfaces: An Illustrated Guide</a></h3>
+												<div class="entry-categories"><a  href="/doctors/" >林進興醫師</a></div>
+												<h3><a  href="{% pageurl post %}"  class="color-underline stretched-link">{{ post.title }}</a></h3>
 											</div>
 											<div class="entry-meta">
 												<ul>
-													<li><a href="#">Mar 11, 2016</a></li>
+													<li><a href="#">{{post.date}}</a></li>
 												</ul>
 											</div>
 											<div class="entry-content">
-												<p>Our eyes are weird and often mislead us. But if you know the peculiarities of human vision, you can construct better designs. Not only do type designers utilize optical tricks for creating readable and well-balanced fonts, but it’s also helpful for designers, who craft user-computer interaction.</p>
+												<p>{{ post.body |striptags|truncatechars:80 }}</p>
 											</div>
 										</div>
 									</div>
-								</article>
+									</article>
+									{% endwith %}
+								{% endfor %}
 
-								<article class="col-12">
-									<div class="row">
-										<div class="col-md-6 mb-0">
-											<a href="#" class="entry-image">
-												<img src="{% static 'demos/blog/images/lists/4.jpg' %}" alt="Image">
-											</a>
-										</div>
-										<div class="col-md-6">
-											<div class="entry-title mt-lg-0 mt-3">
-												<div class="entry-categories"><a href="/blog/pulmonary-fibrosis/">Health</a></div>
-												<h3><a href="/blog/pulmonary-fibrosis/" class="color-underline stretched-link">How to Stock Your Medicine Cabinet Just in Case</a></h3>
-											</div>
-											<div class="entry-meta">
-												<ul>
-													<li><a href="#">Mar 11, 2016</a></li>
-												</ul>
-											</div>
-											<div class="entry-content">
-												<p>Asperiores, tenetur, blanditiis, quaerat odit ex exercitationem pariatur quibusdam veritatis quisquam laboriosam esse beatae hic perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, repudiandae.</p>
-											</div>
-										</div>
-									</div>
-								</article>
+								
+
+								
+
+								
 							</div>
 						</div>
 
 						<!-- Right Side of Based On Your Reading History - Sticky
 						============================================= -->
 						<div class="col-lg-4 mt-5 mt-lg-0 position-sticky h-100" style="top: 234px;">
-							<h3 class="font-secondary fw-medium">最新文章</h3>
+							<h3 class="font-secondary fw-medium">熱門文章</h3>
 
 							<ul class="week-posts posts-sm row col-mb-30">
 								<li class="entry col-12">
