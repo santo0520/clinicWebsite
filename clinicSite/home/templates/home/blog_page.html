@@ -7,16 +7,28 @@
 {% load wagtailimages_tags %}
 
 
+
+{% block title %}{{page.title}} | 林進興診所{% endblock %}
+
+
+
 {% block content %}
 
 <!-- facebook sharing javascript sdk -->
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0" nonce="AgYKeqRn"></script>
 
-<script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+
 
 
 <!-- end facebook sharing  -->
+
+<!-- line sharing  -->
+
+
+<script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+
+<!-- end line sharing  -->
 
 
 
