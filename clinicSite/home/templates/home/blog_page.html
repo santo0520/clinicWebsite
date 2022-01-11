@@ -11,6 +11,15 @@
 {% block title %}{{page.title}} | 林進興診所{% endblock %}
 
 
+{% block customHead %}
+<meta property="og:url"           content="http://sanderslin.pythonanywhere.com/blog/{{page.slug}}/" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="{{page.title}}" />	
+<meta property="og:description"   content="this is test description" />
+{% image page.img_main original as main %}
+<meta property="og:image"         content="{{main.url}}" />
+{% endblock %}
+
 
 {% block content %}
 
